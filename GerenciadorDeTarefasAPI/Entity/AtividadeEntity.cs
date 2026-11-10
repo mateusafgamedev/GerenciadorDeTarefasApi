@@ -12,7 +12,7 @@ namespace GerenciadorDeTarefasAPI.Entity
         public StatusAtividadeEnum StatusAtividade { get; set; }
         public DateTime DataDeCriacao { get; set; } = DateTime.Now;
         public DateTime? DataDeConclusao { get; set; }
-        public DateTime DataDeInicio { get; set; }
+        public DateTime? DataDeInicio { get; set; }
         public TimeOnly? HorarioDeInicio { get; set; }
         public TimeOnly? HoraioDeFinalizacao { get; set; }
         public DiasDaSemanaEnum DiasDaSemana { get; set; }
