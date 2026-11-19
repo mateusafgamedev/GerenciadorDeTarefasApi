@@ -1,5 +1,4 @@
 ﻿using GerenciadorDeTarefasAPI.Entity.Enum;
-using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace GerenciadorDeTarefasAPI.Entity
 {
@@ -7,10 +6,10 @@ namespace GerenciadorDeTarefasAPI.Entity
     {
         public Guid Id { get; set; }
         public string Titulo { get; set; } = string.Empty;
-        public string Tipo { get; set; } = string.Empty;
+        public string Area { get; set; } = string.Empty;
         public string Descricao { get; set; } = string.Empty;
         public string? Detalhes { get; set; }
-        public StatusAtividadeEnum StatusAtividade { get; set; } = StatusAtividadeEnum.NaoIniciada;
+        public SituacaoAtividadeEnum SituacaoAtividade { get; set; } = SituacaoAtividadeEnum.NaoIniciada;
         public DateTime DataDeCriacao { get; set; } = DateTime.Now;
         public DateTime? DataDeConclusao { get; set; }
         public DateTime? DataDeInicio { get; set; }
@@ -19,5 +18,6 @@ namespace GerenciadorDeTarefasAPI.Entity
         public DiasDaSemanaEnum DiasDaSemana { get; set; }
         public Guid UsuarioId { get; set; }
         public UsuarioEntity Usuario { get; set; } = null!;
+        public NaturezaAtividadeEnum NaturezaAtividade { get; set; }
     }
 }

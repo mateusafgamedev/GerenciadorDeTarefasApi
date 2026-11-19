@@ -9,7 +9,7 @@ namespace GerenciadorDeTarefasAPI.Entity
         public int Idade { get; set; }
         public TimeOnly? PeriodoDeAtividadeInicio { get; set; }
         public TimeOnly? PeriodoDeAtividadeFim { get; set; }
-        public bool Ativo { get; set; } = true;
+        public bool ContaAtiva { get; set; } = true;
         public DateTime DataDeCadastro { get; set; } = DateTime.Now;
         public List<AtividadeEntity> Atividades { get; set; } = new();
 

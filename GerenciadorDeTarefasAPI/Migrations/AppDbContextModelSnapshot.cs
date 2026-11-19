@@ -28,6 +28,10 @@ namespace GerenciadorDeTarefasAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Area")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DataDeConclusao")
                         .HasColumnType("datetime2");
 
@@ -53,12 +57,11 @@ namespace GerenciadorDeTarefasAPI.Migrations
                     b.Property<TimeOnly?>("HorarioDeInicio")
                         .HasColumnType("time");
 
-                    b.Property<int>("StatusAtividade")
+                    b.Property<int>("NaturezaAtividade")
                         .HasColumnType("int");
 
-                    b.Property<string>("Tipo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("SituacaoAtividade")
+                        .HasColumnType("int");
 
                     b.Property<string>("Titulo")
                         .IsRequired()
@@ -83,12 +86,12 @@ namespace GerenciadorDeTarefasAPI.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
-                    b.Property<bool>("Ativo")
-                        .HasColumnType("bit");
-
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("ContaAtiva")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime>("DataDeCadastro")
                         .HasColumnType("datetime2");
